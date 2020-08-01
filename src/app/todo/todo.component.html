@@ -1,0 +1,58 @@
+<!--<h2>Todo App with HttpClient</h2>-->
+<!--<div>-->
+<!--  <input type="text" [formControl]="inputControl" (keydown.enter)="addTodo()">-->
+<!--</div>-->
+
+<!--<ul>-->
+<!--  <li *ngFor="let todo of todoList; index as i" [class.completed]="todo.completed">-->
+<!--    <div (click)="toggleTodo(i)">-->
+<!--      Id: {{todo.id}}-->
+<!--      <br>-->
+<!--      {{todo.title}}-->
+<!--    </div>-->
+<!--    <button (click)="deleteTodo(i)">delete</button>-->
+<!--    <button (click)="addTodo()">add</button>-->
+<!--    <button (click)="toggleTodo(i)">toggle</button>-->
+<!--  </li>-->
+<!--</ul>-->
+
+<!---------------------------------------------------->
+<div>
+  <div class="card-header">
+    <div class="row">
+      <div class="col-md-4">
+        <!--        {{ title }}-->
+      </div>
+      <div class="col-md-8">
+
+
+      </div>
+    </div>
+  </div>
+
+  <table class="table table-blue">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Three</th>
+      <th scope="col">Handle</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let todo of todoes, let i = index">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{todo.id}}</td>
+      <td>{{todo.firstName}}</td>
+      <td>{{todo.lastName}}</td>
+<!--      <td>{{todo.title}}</td>-->
+<!--      <td>{{todo.completed}}</td>-->
+      <td>
+        <button class="btn btn-danger" (click)="deleteTodo(todo.id)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
